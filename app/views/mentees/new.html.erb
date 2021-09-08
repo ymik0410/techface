@@ -1,0 +1,40 @@
+<div class="container">
+  <h1>Mentee Application Form</h1>
+  <%= simple_form_for @mentee do |f| %>
+    <%= f.input :name,
+                label: 'Name',
+                required: true,
+                autofocus: true %>
+      <%= f.input :email,
+                label: 'Email',
+                required: true,
+                autofocus: true %>
+      <%= f.input :phone_number,
+                label: 'Phone number',
+                required: true,
+                autofocus: true %>
+      <%= f.input :job,
+                label: 'What is your current job and position?',
+                required: true,
+                autofocus: true %>
+      <%= f.input :industry,
+                label: 'In which industry are you currently working?',
+                as: :radio_buttons,
+                collection: ['Agriculture, Forestry, Mining', 'Industials(Manufacturing,
+                 Construction, etc.)', 'Energy, Utilities', 'Transport, Logistics',
+                 'Media, Creative Industries', 'Data Infrastructure, Telecom',
+                 'Healthcare', 'Education', 'Life Sciences', 'Retail / ecommerce',
+                 'Hospitality, Food, Leisure Travel', 'Public Service, Social Service',
+                 'Financial Services', 'Technology', 'Other'],
+                required: true,
+                autofocus: true %>
+      <%= f.input :experience,
+                label: 'How many years of work experience do you have?',
+                autofocus: true %>
+      <%= f.input :profile,
+                label: 'Please share your LinkedIn Profile with us:',
+                autofocus: true %>
+    <%= link_to 'Back', root_path %>
+    <%= f.submit 'Forward'%>
+  <% end %>
+</div>

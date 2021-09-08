@@ -1,4 +1,9 @@
 <!-- <div>
-
+  <%= simple_form_for(@user) do |f| %>
+    <%= f.input :email,
+                required: true,
+                autofocus: true,
+                input_html: { autocomplete: "email" } %>
+  <% end %>
 </div>
  -->
