@@ -1,0 +1,39 @@
+<div class="banner"></div>
+<div class="application">
+  <div class="form-container">
+    <h1>Mentee Application Form</h1>
+  </div>
+    <%= simple_form_for(@mentee) do |f| %>
+      <div class="form-container">
+        <h3>Tell us why you are looking for a mentor</h3>
+        <p>What are the goals you would like to reach with the help of a mentor</p>
+      </div>
+
+      <div class="form-container">
+        <%= f.input :reason,
+                  label: 'In which industry are you currently working?',
+                  as: :radio_buttons,
+                  collection: ['Next career step', 'Change jobs', 'Change industry',
+                    'Not sure where I want to go in my career', 'Other'],
+                  required: true,
+                  autofocus: true %>
+      </div>
+
+      <div class="form-container">
+        <h3>Why do you think a mentor could help you today?</h3>
+        <%= f.input :help,
+                  autofocus: true %>
+      </div>
+
+      <div class="form-container">
+        <%= f.input :expectations,
+                  label: 'What do you expect from a mentor?',
+                  autofocus: true %>
+      </div>
+      <div class="buttons">
+        <%= link_to 'Back', root_path %>
+        <%= f.submit 'Forward' %>
+      </div>
+    <% end %>
+  </div>
+</div>

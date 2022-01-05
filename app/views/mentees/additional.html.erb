@@ -1,0 +1,33 @@
+<div class="banner"></div>
+<div class="application">
+  <div class="form-container">
+    <h1>Mentee Application Form</h1>
+  </div>
+    <%= simple_form_for @mentee do |f| %>
+      <div class="form-container">
+        <%= f.input :email,
+                  label: 'Email',
+                  required: true,
+                  autofocus: true %>
+      </div>
+
+      <div class="form-container">
+        <h3>Personal information</h3>
+        <p>Please provide your personal information and what you are doing today.</p>
+      </div>
+
+
+      <div class="form-container">
+        <%= f.input :name,
+                    label: 'Name',
+                    required: true,
+                    autofocus: true %>
+      </div>
+
+      <div class="buttons">
+        <%= link_to 'Back', root_path %>
+        <%= f.submit 'Forward' %>
+      </div>
+    <% end %>
+  </div>
+</div>
