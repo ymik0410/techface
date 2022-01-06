@@ -4,8 +4,8 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   # resources :mentees
-  get "mentees/:id", to: "mentees#show", as: :mentee
   get "mentees/new", to: "mentees#new", as: "new_mentee"
+  # get "mentees/:id", to: "mentees#show", as: :mentee
   post "mentees", to: "mentees#create"
   get "mentees/:id/edit", to: "mentees#edit", as: "edit_mentee"
   patch "mentees/:id", to: "mentees#update"

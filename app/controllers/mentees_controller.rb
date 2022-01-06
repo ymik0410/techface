@@ -8,11 +8,12 @@ class MenteesController < ApplicationController
   def create
     @mentee = Mentee.new(mentee_params)
     if @mentee.save
-      redirect_to edit_mentee_path(@mentee)
+      redirect_to root_path
     end
   end
 
   def show
+
   end
 
   def edit
@@ -30,6 +31,6 @@ class MenteesController < ApplicationController
   end
 
   def set_mentee
-    @mentee = Mentee.find(params[:id])
+    # @mentee = Mentee.find(params[:id])
   end
 end
